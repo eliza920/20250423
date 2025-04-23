@@ -1,0 +1,65 @@
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 20px; /* 增加選單的內邊距，放大選單整體大小 */
+  display: flex;
+  gap: 30px; /* 增加選單項目之間的間距 */
+  background-color: rgba(254, 250, 224, 0.8); /* 微透明背景顏色 */
+  border-radius: 8px; /* 圓角 */
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #00171f; /* 文字顏色 */
+  font-size: 22px; /* 增加文字大小 */
+  font-family: 'Microsoft JhengHei', sans-serif; /* 微軟正黑體 */
+  font-weight: bold;
+  padding: 10px 15px; /* 增加選單項目的內邊距 */
+  border-radius: 5px;
+  transition: color 0.3s; /* 平滑過渡效果 */
+}
+
+.menu a:hover {
+  color: #ff0000; /* 滑鼠移動到上面時的文字顏色 */
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(254, 250, 224, 0.9);
+  border-radius: 8px;
+  z-index: 3;
+  max-width: calc(100vw - 20px); /* 限制子選單寬度不超過視窗寬度，並留出空隙 */
+  overflow-x: auto; /* 如果內容過多，允許水平滾動 */
+  box-sizing: border-box; /* 包括內邊距和邊框在內 */
+}
+.submenu a {
+  text-decoration: none;
+  color: #00171f;
+  font-size: 16px;
+  font-family: 'Microsoft JhengHei', sans-serif;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  letter-spacing: 7px; /* 增加文字間距 */
+  line-height: 2; /* 增加行距 */
+  text-align: center; /* 文字置中 */
+  white-space: nowrap; /* 禁止文字換行 */
+}
+
+.submenu a:hover {
+  background-color: #f4d35e;
+  color: #fff;
+}
